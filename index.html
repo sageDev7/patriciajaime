@@ -238,29 +238,15 @@
     .hero-contacto-item a { color: inherit; transition: color .2s; }
     .hero-contacto-item a:hover { color: rgba(255,255,255,.9); }
 
-    /* Portrait placeholder */
+    /* Portrait */
     .hero-portrait {
       width: 100%; aspect-ratio: 3/4;
       background: var(--navy); position: relative; overflow: hidden;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
     }
-    .hero-portrait::before {
-      content: ''; position: absolute; inset: 0;
-      background: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&sat=-100') center/cover no-repeat;
-      opacity: .18; filter: grayscale(100%);
+    .hero-portrait img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
     }
-    .portrait-init {
-      position: relative; z-index: 1;
-      font-family: var(--serif); font-weight: 400; font-style: italic;
-      font-size: clamp(4rem, 8vw, 7rem); color: rgba(255,255,255,.3);
-      line-height: 1; letter-spacing: -.02em; text-align: center;
-    }
-    .portrait-frame { position: absolute; inset: 20px; border: 1px solid rgba(255,255,255,.12); pointer-events: none; }
-    .portrait-note {
-      position: absolute; bottom: 18px; left: 0; right: 0; text-align: center;
-      font-size: .52rem; font-weight: 500; letter-spacing: .16em;
-      text-transform: uppercase; color: rgba(255,255,255,.22);
-    }
+    .portrait-frame { position: absolute; inset: 20px; border: 1px solid rgba(255,255,255,.12); pointer-events: none; z-index: 1; }
     .portrait-badge {
       position: absolute; bottom: -1px; left: -1px;
       background: var(--oro); padding: 1.2rem 1.6rem;
@@ -603,14 +589,16 @@
           <i class="ti ti-map-pin"></i>
           Av. Intendente Ratti 3582, Ituzaingó
         </div>
+        <div class="hero-contacto-item">
+          <i class="ti ti-brand-instagram"></i>
+          <a href="https://instagram.com/dra.patriciajaime" target="_blank" rel="noopener">@dra.patriciajaime</a>
+        </div>
       </div>
     </div>
 
-    <!-- PLACEHOLDER: reemplazar con foto de Patricia cuando esté disponible -->
     <div class="hero-portrait rv">
+      <img src="./patricia.png" alt="Patricia Estela Jaime — Abogada en Ituzaingó"/>
       <div class="portrait-frame"></div>
-      <span class="portrait-init">P. J.</span>
-      <span class="portrait-note">Foto próximamente</span>
       <div class="portrait-badge">
         <div class="portrait-badge-n">19+</div>
         <div class="portrait-badge-l">años de<br/>trayectoria</div>
@@ -665,7 +653,7 @@
           </p>
         </div>
         <blockquote class="sobre-cita">
-          <p>Cada situación legal tiene su solución. El primer paso es entender bien el problema.</p>
+          <p>Soluciones legales proactivas para enfrentar cada conflicto que atraviese nuestra vida.</p>
           <cite>— Patricia Jaime, Abogada</cite>
         </blockquote>
         <a href="https://wa.me/5491153399118" target="_blank" rel="noopener" class="btn btn-navy">
@@ -721,14 +709,15 @@
           <i class="prac-chevron fa-solid fa-chevron-down"></i>
         </div>
         <ul class="prac-list">
-          <li>Sucesiones: inicio, coherederos, testamentos, partición, cesiones</li>
+          <li>Sucesiones: presentación coherederos, testamentos, partición, cesiones</li>
+          <li>Compensaciones económicas por el uso exclusivo de la propiedad</li>
           <li>Contratos de alquiler, prórrogas, cesión y cobro</li>
           <li>Desalojo: anticipado, por vencimiento o falta de pago</li>
           <li>Usucapión y prescripción adquisitiva</li>
+          <li>Reivindicación de la propiedad</li>
           <li>Juicios de escrituración</li>
           <li>Propiedad horizontal: consorcios y cobro de expensas</li>
           <li>Propietarios: reclamos, interdictos y reparaciones urgentes</li>
-          <li>Ejecución de acuerdos y homologaciones</li>
         </ul>
       </div>
 
@@ -741,13 +730,11 @@
           <i class="prac-chevron fa-solid fa-chevron-down"></i>
         </div>
         <ul class="prac-list">
-          <li>Divorcios de común acuerdo y contenciosos</li>
-          <li>Disolución de sociedad conyugal</li>
-          <li>Alimentos: fijación, aumento, disminución y ejecución</li>
-          <li>Tenencia y régimen de comunicación</li>
-          <li>Reconocimiento de hijos y adopciones</li>
-          <li>Violencia familiar</li>
-          <li>Determinación de la capacidad</li>
+          <li>Uniones convivenciales: acuerdos de convivencia y fin de la convivencia</li>
+          <li>Matrimonio: acuerdos prenupciales y régimen de bienes</li>
+          <li>Cuidado de los hijos, régimen de comunicación y responsabilidad parental</li>
+          <li>Alimentos: aumentos y disminución de cuota alimentaria</li>
+          <li>Divorcio, atribución de la vivienda y liquidación de la sociedad conyugal</li>
         </ul>
       </div>
 
@@ -763,7 +750,8 @@
           <li>Despidos y liquidaciones finales</li>
           <li>Reclamos por registración incorrecta del contrato</li>
           <li>Discriminación y mobbing laboral</li>
-          <li>Accidentes laborales y ART</li>
+          <li>Accidentes laborales: investigación de accidentes, actas de intimación, capacitaciones</li>
+          <li>Contamos con un asesor especializado en Higiene y Seguridad en el Trabajo</li>
         </ul>
       </div>
 
@@ -904,6 +892,13 @@
               <div class="ubi-val"><a href="https://wa.me/5491153399118" target="_blank" rel="noopener">Escribir ahora →</a></div>
             </div>
           </div>
+          <div class="ubi-item">
+            <i class="ti ti-brand-instagram" style="color:var(--oro);"></i>
+            <div>
+              <div class="ubi-label">Instagram</div>
+              <div class="ubi-val"><a href="https://instagram.com/dra.patriciajaime" target="_blank" rel="noopener">@dra.patriciajaime</a></div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -973,6 +968,7 @@
       <div class="f-contacto">
         <a href="tel:+5491153399118"><i class="ti ti-phone"></i> 11 5 339 9118</a>
         <a href="https://wa.me/5491153399118" target="_blank" rel="noopener"><i class="ti ti-brand-whatsapp"></i> WhatsApp</a>
+        <a href="https://instagram.com/dra.patriciajaime" target="_blank" rel="noopener"><i class="ti ti-brand-instagram"></i> @dra.patriciajaime</a>
         <a href="#ubicacion"><i class="ti ti-map-pin"></i> Ituzaingó, GBA</a>
       </div>
     </div>
